@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "9067076d-c386-4f6d-9f9b-5753a9aaa9e3",
+		"name": "Aida APIs",
+		"description": "HAR To Postman Generated Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28145601"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "localhost:3001/api/users/signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Armando\",\n\t\"email\":\"mando1412@gmail.com\",\n\t\"password\":\"1234abc\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/users/signup",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": " / 400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/users/signup",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-/+4UZqwWW7cz2JBe4An6A6+c7tA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Jun 2023 00:38:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "application/json; charset=utf-8 content type is not supported in the response body"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Incidents",
+			"item": [
+				{
+					"name": "localhost:3001/api/incidents",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234abc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "mando1412@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\":\"This is my second incident\",\n\t\"user\":\"armando.sanchez1@ibm.com\",\n\t\"latitude\":20.12321321,\n\t\"longitude\":-103.3285566\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/incidents",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"incidents"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/incidents",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"incidents"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-ljljPQB0RkdLVzy8AKdyEkzZcL4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 21:11:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "application/json; charset=utf-8 content type is not supported in the response body"
+						}
+					]
+				},
+				{
+					"name": "localhost:3001/api/incidents/649367792bceeb6dc2ccd11b",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234abc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "mando1412@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic Og=="
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/api/incidents/6494ee96767336085191d250",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"incidents",
+								"6494ee96767336085191d250"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "not found / 404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic Og=="
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/incidents/649367792bceeb6dc2ccd11b",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"incidents",
+										"649367792bceeb6dc2ccd11b"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-FQG5794dbhTyRwgytQ7rokul7mM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Jun 2023 00:36:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "application/json; charset=utf-8 content type is not supported in the response body"
+						}
+					]
+				},
+				{
+					"name": "localhost:3001/api/incidents",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234abc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "mando1412@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"_id\": \"649367792bceeb6dc2ccd11b\",\n\t\t\"description\": \"This is my third incident\",\n\t\t\"user\": \"armando.sanchez1@ibm.com\",\n\t\t\"latitude\": 20.12321321,\n\t\t\"longitude\": -103.3285566\n}"
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/incidents",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"incidents"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/incidents",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"incidents"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-Bo1Gzr0t8eIb/8M3lS7nUlEN+xk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 21:13:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "application/json; charset=utf-8 content type is not supported in the response body"
+						}
+					]
+				},
+				{
+					"name": "localhost:3001/api/incidents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234abc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "mando1412@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWFuZG8xNDEyQGdtYWlsLmNvbToxMjM0YWJj"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/incidents",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"incidents"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic bWFuZG8xNDEyQGdtYWlsLmNvbToxMjM0YWJj"
+									}
+								],
+								"url": {
+									"raw": "{{baseURL1}}/api/incidents",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"incidents"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "954"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3ba-VA6jhV/Me2IT63PEcyS8+EukAfA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 23 Jun 2023 00:34:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "application/json; charset=utf-8 content type is not supported in the response body"
+						}
+					]
+				},
+				{
+					"name": "localhost:3001/api/incidents/649367792bceeb6dc2ccd11b",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1234abc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "mando1412@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL1}}/api/incidents/649344af923223db8bb2b6d5",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"incidents",
+								"649344af923223db8bb2b6d5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successfully / 200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL1}}/api/incidents/649367792bceeb6dc2ccd11b",
+									"host": [
+										"{{baseURL1}}"
+									],
+									"path": [
+										"api",
+										"incidents",
+										"649367792bceeb6dc2ccd11b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "240"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f0-D464/9nUFCKhfc31doBsaj4JMO4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Jun 2023 21:14:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "application/json; charset=utf-8 content type is not supported in the response body"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL1",
+			"value": "https://localhost:3001",
+			"type": "any"
+		},
+		{
+			"key": "Hostname",
+			"value": "baseURL1"
+		}
+	]
+}
